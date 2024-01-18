@@ -51,7 +51,7 @@ public static class Config
         }
         app.UseAuthorization();
 
-        app.UseRGF<BaseDbContext, BaseDbContextPool, BaseDbContextPool>();
         await app.MigrateBaseDbContextAsync();
+        app.UseRGF<BaseDbContext, BaseDbContextPool, BaseDbContextPool>();
     }
 }
